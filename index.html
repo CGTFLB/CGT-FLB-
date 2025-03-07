@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Syndicat CGT - Fondation Léopold Bellan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Syndicat CGT - Fondation Léopold Bellan</h1>
+        <nav>
+            <ul>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#actualites">Actualités</a></li>
+                <li><a href="#tracts">Tracts</a></li>
+                <li><a href="#reseaux">Réseaux sociaux</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="presentation">
+        <h2>Présentation du syndicat</h2>
+        <p>Le syndicat CGT défend les droits des travailleurs et s'engage pour de meilleures conditions de travail.</p>
+    </section>
+
+    <section id="contacts">
+        <h2>Contacts par établissement</h2>
+        <ul>
+            <li>Établissement 1 - Contact : contact1@cgt.fr</li>
+            <li>Établissement 2 - Contact : contact2@cgt.fr</li>
+        </ul>
+    </section>
+
+    <section id="actualites">
+        <h2>Dernières actualités</h2>
+        <div id="rss-feed">Chargement des actualités...</div>
+    </section>
+
+    <section id="tracts">
+        <h2>Nos tracts</h2>
+        <ul>
+            <li><a href="tract1.pdf">Tract 1</a></li>
+            <li><a href="tract2.pdf">Tract 2</a></li>
+        </ul>
+    </section>
+
+    <section id="reseaux">
+        <h2>Suivez-nous sur les réseaux sociaux</h2>
+        <ul>
+            <li><a href="https://facebook.com/CGTFondationLeopoldBellan">Facebook</a></li>
+            <li><a href="https://instagram.com/CGTFondationLeopoldBellan">Instagram</a></li>
+            <li><a href="https://linkedin.com/company/CGTFondationLeopoldBellan">LinkedIn</a></li>
+        </ul>
+    </section>
+
+    <script>
+        fetch('https://www.sante.cgt.fr/rss.xml')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('rss-feed').innerHTML = "<p>Articles récents de la fédération...</p>";
+            });
+    </script>
+</body>
+</html>
+    
